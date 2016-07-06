@@ -1,3 +1,4 @@
+    # Робота з бренчами 
     1  touch index.html
     2  mkdir assets
     3  mkdir uploads
@@ -45,14 +46,11 @@
    45  git push
    46  git checkout archirecture 
    47  git push origin :archirecture 
-   48  git co master
-   49  git checkout master
-   50  git br -d architecture
-   51  git branch -d architecture
-   52  git branch
-   53  git branch -d architecture
+   53  git checkout master
    54  git branch -d archirecture
    55  git branch
+   
+   # Rebase
    56  git checkout -b rebase_branch
    57  git checkout master
    58  git status
@@ -73,6 +71,8 @@
    73  git merge --no-ff rebase_branch 
    74  git push
    75  git branch -d rebase_branch  
+   
+   # Tag
    76  git add index.html 
    77  git commit -m 'Add fourth line to index.html'
    78  git add index.html 
@@ -82,11 +82,15 @@
    82  git log
    83  git tag
    84  git push origin --tags
+   
+   # Submodule
    85  mkdir vendor
   100  git submodule add https://github.com/jquery/jquery.git ./vendor/jquery
   101  git status
   102  git commit -m 'Add jquery as submodule'
   103  git push
+  
+  # GitPages
   105  git checkout -b gh-pages
   106  git status
   107  git add index.html 
@@ -98,6 +102,8 @@
   113  git log -p
   114  git status
   115  git push
+  
+  # Conflict
   116  git checkout master
   117  git status
   118  touch file.txt
@@ -122,3 +128,17 @@
   137  git commit 
   138  git status
   139  git push
+  
+  # MERGE ABORT
+    6  git checkout another_conflict_branch
+    7  git checkout -b another_conflict_branch
+    8  git status
+    9  git add file.txt 
+   10  git commit -m 'Delete text from file.txt'
+   11  git checkout master
+   12  git commit -m 'Add third line to file.txt'
+   13  git status
+   14  git add file.txt 
+   15  git commit -m 'Add third line to file.txt'
+   16  git merge --no-ff another_conflict_branch 
+   17  git merge --abort
