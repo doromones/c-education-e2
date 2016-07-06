@@ -1,0 +1,124 @@
+    1  touch index.html
+    2  mkdir assets
+    3  mkdir uploads
+    4  touch assets/.empty
+    5  git status
+    6  touch README.MD
+    7  git status
+    8  git add README.MD 
+    9  git status
+   10  git rm --cached README.MD 
+   11  git status
+   12  git push -u origin master
+   13  git add README.MD 
+   14  git commit -m 'init repo'
+   15  git push
+   16  git checkout -b archirecture
+   17  mkdir assets
+   18  touch assets/.empty
+   19  mkdir uploads
+   20  touch uploads/.empty
+   21  touch index.html
+   22  git status
+   23  git add .
+   24  git status
+   25  git commit
+   26  git log
+   27  touch assets/all.js
+   28  touch assets/css.js
+   29  git st
+   30  git status
+   31  git add .
+   32  git status
+   33  git commit 
+   34  git push
+   35  touch .gitignore
+   36  touch uploads/any.file
+   37  git status
+   38  git add .gitignore 
+   39  git status
+   40  git commit
+   41  git push
+   42  git co master
+   43  git checkout master
+   44  git merge --no-ff archirecture 
+   45  git push
+   46  git checkout archirecture 
+   47  git push origin :archirecture 
+   48  git co master
+   49  git checkout master
+   50  git br -d architecture
+   51  git branch -d architecture
+   52  git branch
+   53  git branch -d architecture
+   54  git branch -d archirecture
+   55  git branch
+   56  git checkout -b rebase_branch
+   57  git checkout master
+   58  git status
+   59  git add index.html 
+   60  git commit -m 'Add first line to index.html'
+   61  git add index.html 
+   62  git commit -m 'Add second line to index.html'
+   63  git checkout rebase_branch 
+   64  git rebase master
+   65  git add index.html 
+   66  git commit -m 'Add third line to index.html'
+   67  git log
+   68  git status
+   69  git add index.html 
+   70  git commit -m 'Add third line to index.html'
+   71  git log
+   72  git checkout master
+   73  git merge --no-ff rebase_branch 
+   74  git push
+   75  git branch -d rebase_branch  
+   76  git add index.html 
+   77  git commit -m 'Add fourth line to index.html'
+   78  git add index.html 
+   79  git commit -m 'Add fifth line to index.html'
+   80  git push
+   81  git tag -a v0.1 -m 'first tag' HEAD
+   82  git log
+   83  git tag
+   84  git push origin --tags
+   85  mkdir vendor
+  100  git submodule add https://github.com/jquery/jquery.git ./vendor/jquery
+  101  git status
+  102  git commit -m 'Add jquery as submodule'
+  103  git push
+  105  git checkout -b gh-pages
+  106  git status
+  107  git add index.html 
+  108  git commit -m 'edit index.html'
+  109  git push
+  110  git add index.html 
+  111  git commit -m 'edit index.html'
+  112  git push
+  113  git log -p
+  114  git status
+  115  git push
+  116  git checkout master
+  117  git status
+  118  touch file.txt
+  119  git checkout -b conflict_branch
+  120  git checkout master
+  121  git status
+  122  git add file.txt 
+  123  git status
+  124  git commit -m 'Create file txt'
+  125  git checkout conflict_branch 
+  126  touch file.txt
+  127  git log
+  128  git add file.txt 
+  129  git status
+  130  git commit -m 'Add conflict file.txt'
+  131  git checkout master
+  132  git merge --no-ff conflict_branch 
+  133  git status
+  134  cat file.txt 
+  135  git add file.txt 
+  136  git status
+  137  git commit 
+  138  git status
+  139  git push
